@@ -1,7 +1,7 @@
 import React, {useEffect, useRef, useState} from 'react'
 import {TiLocationArrow} from "react-icons/ti";
 import {useWindowScroll} from "react-use";
-import gsap from 'gsap';
+import Button from "./Button.jsx";
 
 const Navbar = () => {
   const navItems = ['Nexus', 'Vault', 'Prologue', "About", "Contact"];
@@ -24,16 +24,9 @@ const Navbar = () => {
     if(currentScrollY === 0) {
       setIsNavbarVisible(true);
       navContainerRef.current.classList.remove("floating-nav")
-    } else if(currentScrollY > lastScrollY) {
-      setIsNavbarVisible(false);
-      navContainerRef.current.classList.add("floating-nav")
-    } else if(currentScrollY < lastScrollY) {
-      setIsNavbarVisible(true);
-      navContainerRef.current.classList.add("floating-nav")
     }
-    setLastScrollY(currentScrollY);
 
-  }, [currentScrollY, lastScrollY]);
+  }, [currentScrollY]);
 
   useEffect(() => {
     if(isAudioPlaying) {
@@ -44,15 +37,6 @@ const Navbar = () => {
 
   }, [isAudioPlaying])
 
-  useEffect(() => {
-    gsap.to(navContainerRef.current, {
-      y: isNavbarVisible ? 0 : -100,
-      opacity: isNavbarVisible ? 1 : 0,
-      duration: 0.2,
-    })
-
-  }, [isNavbarVisible])
-
   return (
       <div ref={navContainerRef} className={"fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6"} >
         <header className={"absolute top-1/2 w-full -translate-y-1/2"}>
@@ -61,7 +45,7 @@ const Navbar = () => {
 
             <div className={"flex items-center gap-7"} >
               <img src="/img/logo.png" alt="logo" className={"w-10"}/>
-              <button
+              <Button
                   id = "product-button"
                   title = "Products"
                   rightIcon={<TiLocationArrow />}

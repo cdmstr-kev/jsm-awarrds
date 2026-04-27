@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 const AnimatedTitle = ({ title, containerClass }) => {
 
@@ -31,7 +32,7 @@ const AnimatedTitle = ({ title, containerClass }) => {
   }, []);
 
   return (
-    <div className={`animated-title ${containerClass}`}>
+    <div ref={containerRef} className={`animated-title ${containerClass}`}>
       {title.split('<br />').map((line, index) => (
         <div key={index} className="flex-center max-w-full
         flex-wrap gap-2 px-10 md:gap-3">
