@@ -1,4 +1,3 @@
-import React from 'react'
 import { FaTwitter, FaInstagram, FaYoutube,  FaTiktok,  FaLinkedin} from "react-icons/fa";
 
 
