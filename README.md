@@ -1,16 +1,70 @@
-# React + Vite
+# Zentry - Award-Winning Gaming Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A high-performance, visually stunning gaming website built with React, GSAP, and Tailwind CSS. This project features immersive animations, a bento-style layout, and a modern UI/UX design inspired by the Zentry ecosystem.
 
-Currently, two official plugins are available:
+## 🚀 Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19**: Modern UI development with hooks and functional components.
+- **GSAP (GreenSock Animation Platform)**: Advanced scroll-triggered animations and complex transitions.
+- **Tailwind CSS v4**: Utility-first CSS framework for rapid and modern styling.
+- **Vite**: Ultra-fast build tool and development server.
+- **React Icons**: A comprehensive library of icons for the UI.
 
-## React Compiler
+## ✨ Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Immersive Hero Section**: Featuring a multi-layered video player with interactive transitions and clip-path animations.
+- **Bento Grid Layout**: A modern "Bento Box" style feature section with interactive tilt effects and video backgrounds.
+- **Smooth Scroll Animations**: Powered by GSAP's ScrollTrigger for a seamless and engaging user experience.
+- **Custom Typography**: Integration of specialized gaming fonts (Zentry, General Sans, Robert Medium).
+- **Interactive Story Section**: A unique 3D-tilt image container that reacts to mouse movements.
+- **Responsive Design**: Fully optimized for various screen sizes, from mobile to desktop.
+- **Floating Navbar**: A sleek, reactive navigation bar with audio indicators and hover effects.
 
-## Expanding the ESLint configuration
+## 🛠️ Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v18 or higher recommended)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/jsm-awwards.git
+   ```
+
+2. Navigate to the project directory:
+   ```bash
+   cd jsm-awwards
+   ```
+
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+### Development
+
+Run the development server:
+```bash
+npm run dev
+```
+The application will be available at `http://localhost:5173`.
+
+### Build
+
+Build the project for production:
+```bash
+npm run build
+```
+
+## 📂 Project Structure
+
+- `src/components`: Reusable UI components (Hero, Features, Story, etc.).
+- `src/index.css`: Tailwind CSS configuration and custom global styles.
+- `public/`: Static assets including images, videos, and fonts.
+
+## 📜 License
+
+This project is licensed under the MIT License.
